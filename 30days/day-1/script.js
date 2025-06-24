@@ -19,9 +19,7 @@ async function fetchWeather(city) {
         document.querySelector(".error").style.display = "none";
     }
 
-    var data = await response.json();
-
-    console.log(data);
+    let data = await response.json();
 
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
