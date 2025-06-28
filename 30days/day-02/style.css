@@ -1,0 +1,190 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Style */
+body {
+    background: linear-gradient(120deg, #eeabab, #ca7bfe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #4a4d8c;
+    border-radius: 15px;
+    padding: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.235);
+    box-shadow: -15px 14px 8px 7px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.container h1 {
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Input Form */
+.form {
+    display: flex;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: -6px 7px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+}
+
+.form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background-color: #bf4f51;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #a43f41;
+}
+
+.form button:active {
+    background-color: #8f3537;
+    transition: background-color 0.1s ease;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+/* List Item */
+li{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+}
+
+li::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border: 2px solid #908ff0;
+    border-radius: 50%;
+}
+
+.checked::before {
+    background-color: #8880dc;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: #858585;
+}
+
+/* Delete Button */
+.delete {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.delete:hover {
+    background-color: #d32f2f;
+}
+
+/* List Item Container */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Empty State */
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #adadad;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* Optional - For paragraph message */
+.no-items {
+    color: #adadad;
+    font-style: italic;
+    font-size: 16px;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .form input {
+        padding: 8px;
+    }
+
+    .form button {
+        padding: 8px 16px;
+    }
+
+    ul {
+        padding: 5px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
