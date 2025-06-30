@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #852020, #f58b8b);
+}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    max-width: 470px;
+    background: white;
+    padding: 30px 30px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.wrapper.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease-in-out;
+}
+.wrapper .content,
+.content .warn-icon,
+.warn-icon span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content .warn-icon{
+    width: 115px;
+    height: 115px;
+    background: linear-gradient(to right, #852020, #f58b8b);
+    border-radius: 50%;
+}
+.warn-icon span{
+    line-height: 115px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 100px;
+}
+.content span i{
+    background: linear-gradient(to right, #852020, #f58b8b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+}
+.content h2{
+    margin-top: 35px;
+    font-size: 32px;
+}
+
+.content p{
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+.btn{
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: linear-gradient(to top, #852020, #f58b8b);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover{
+    background: linear-gradient(to right, #f58b8b, #852020);
+}
