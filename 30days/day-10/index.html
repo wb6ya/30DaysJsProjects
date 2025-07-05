@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize and Compress Images</title>
+    <link rel="stylesheet" href="../day-10/style.css">
+    <script src="../day-10/script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="upload-box">
+            <input type="file" accept="Image/*" hidden>
+            <img src="upload-icon.svg" alt="">
+            <p>Browse Filw to Upload</p>
+        </div>
+        <div class="content">
+            <div class="row sizes">
+                <div class="cloumn width">
+                    <label >width</label>
+                    <input type="number">
+                </div>
+                <div class="cloumn height">
+                    <label >Height</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="row checkboxes">
+                <div class="cloumn ratio">
+                    <input type="checkbox" id="ratio" checked>
+                    <label for="ratio">Lock aspect ratio</label>
+                </div>
+                <div class="cloumn quality">
+                    <input type="checkbox" id="quality">
+                    <label for="quality">Reduce quality</label>
+                </div>
+            </div>
+            <button class="download-btn">Download Image</button>
+        </div>
+    </div>
+</body>
+</html>
