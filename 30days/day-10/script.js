@@ -4,6 +4,7 @@ fileInput = uploadBox.querySelector("input"),
 widthInput = document.querySelector(".width input"),
 HeightInput = document.querySelector(".height input"),
 ratioInput = document.querySelector(".ratio input"),
+qualityInput = document.querySelector(".quality input"),
 downloadBtn = document.querySelector(".download-btn");
 
 let ogImageRatio;
@@ -36,12 +37,18 @@ HeightInput.addEventListener("keyup", () => {
 
 const resizeAndDownload = () => {
     const canvas = document.createElement("canvas")
+    const a = document.createElement("a")
     const ctx = canvas.getContext("2d")
+
+    const imgQuality = qualityInput.checked ? 0.7 : 1.0;
 
     canvas.width = widthInput.value
     canvas.height = HeightInput.value
 
-    ctx.drawImage(previewImg)
+    ctx.drawImage(previewImg, 0, 0, canvas.width, canvas.height)
+    a.href = canvas.toDataURL("image/jpeg", imgQuality)
+    a.download = new Date().getTime()
+    a.click()
 }
 
 downloadBtn.addEventListener("click", resizeAndDownload)

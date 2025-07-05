@@ -13,8 +13,14 @@ body{
 .wrapper{
     width: 450px;
     background: #fff;
+    height: 288px;
     border-radius: 9px;
     padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.wrapper.active{
+    height: 537px;
 }
 .wrapper .upload-box{
     height: 225px;
@@ -47,6 +53,13 @@ body{
 }
 .wrapper .content{
     margin-top: 28px;
+    opacity: 0;
+    pointer-events: none;
+}
+.wrapper.active .content{
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.3s ease;
 }
 .content .row{
     display:flex ;
