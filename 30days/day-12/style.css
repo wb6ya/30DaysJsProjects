@@ -54,5 +54,8 @@ span{
     color: #feb47b;
     font-size: 1.2rem;
     margin-top: 20px;
+    display: none;
+}
+span.active{
     display: block;
 }
